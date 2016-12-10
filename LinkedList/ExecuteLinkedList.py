@@ -1,6 +1,8 @@
 from LinkedList import Linkedlist
 
 def Process():
+    print('Linked list')
+
     list = Linkedlist.LinkedList()
     for x in range(1, 11):
         list.addLast(x)

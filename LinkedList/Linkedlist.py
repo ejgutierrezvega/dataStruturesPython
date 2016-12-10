@@ -31,12 +31,14 @@ class LinkedList(object):
         return self.size
 
     def getAllValues(self):
+        result = ''
         current = self.head
         while current.getNext() is not None:
-            print(current.getData())
+            result += str(current.getData()) + ', '
             current = current.getNext()
 
-        print(current.getData())
+        result += str(current.getData()) + ', '
+        print(result)
 
     def findByPosition(self, position, reverse):
         if reverse is True:

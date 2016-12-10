@@ -1,6 +1,10 @@
-from LinkedList import ExecuteLinkedList
+#from LinkedList import ExecuteLinkedList
+#from BinaryTree import ExecuteBinaryTree
+from BubbleSort import ExecuteBubbleSort
 
-print('Linked List:')
-ExecuteLinkedList.Process()
+#ExecuteLinkedList.Process()
+#print('.........')
+#ExecuteBinaryTree.Process()
+ExecuteBubbleSort.Process()
 
-print('.........')
+
