@@ -22,4 +22,7 @@ def Process():
     print('Delete value')
     list.deleteByValue(7)
 
+    print('Add value after')
+    list.addValueAfter(50, 4)
+
     list.getAllValues()

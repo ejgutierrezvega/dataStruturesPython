@@ -68,3 +68,14 @@ class LinkedList(object):
 
             previous = current
             current = current.getNext()
+
+    def addValueAfter(self, value, data):
+        new_value = Node(value)
+        current = self.head
+        inserted = False
+        while current.getNext() is not None and inserted is False:
+            if current.getData() == data:
+                new_value.setNext(current.getNext())
+                current.setNext(new_value)
+                inserted = True
+            current = current.getNext()
