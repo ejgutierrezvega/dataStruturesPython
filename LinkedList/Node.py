@@ -11,5 +11,3 @@ class Node(object):
 
     def setNext(self, newdata):
         self.next_node = newdata
-
-    
