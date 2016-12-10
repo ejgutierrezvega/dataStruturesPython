@@ -34,6 +34,9 @@ def Process():
     result = bTree.findMin()
     print('Min value: ' + str(result))
 
+    print('Breadth first')
+    bTree.findByValueBreadthFirst(valueToFind)
+
     print('Value to remove: ' + str(valueToFind))
     result = bTree.removeByValue(valueToFind)
     if result:

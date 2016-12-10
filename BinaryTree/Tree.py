@@ -1,4 +1,5 @@
 from Node import Node
+from QueueStructure import queue_struct
 
 class tree(object):
     def __init__(self):
@@ -122,3 +123,22 @@ class tree(object):
             node.right = self._removeByValue(node.right, value)
 
         return node
+
+    def findByValueBreadthFirst(self, value):
+        result = ''
+        if self.root is not None:
+            q = queue_struct.queue_class()
+            q.enqueue(self.root)
+            while q.size() > 0:
+                n = q.dequeue()
+                result += n.getData() + ', '
+                if n.getData() == str(value):
+                    print result
+                    return
+
+                if n.left is not None:
+                    q.enqueue(n.left)
+                if n.right is not None:
+                    q.enqueue(n.right)
+
+        print result
