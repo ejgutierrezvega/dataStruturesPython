@@ -2,6 +2,8 @@ from LinkedList import ExecuteLinkedList
 from BinaryTree import ExecuteBinaryTree
 from BubbleSort import ExecuteBubbleSort
 from Stack import ExecuteStack
+from Fibonacci import fibonacci
+from MergeSort import merge_sort
 
 def get_options():
     options = {
@@ -9,7 +11,9 @@ def get_options():
         '1': 'Linked list',
         '2': 'Binary tree',
         '3': 'Bubble sort',
-        '4': 'Stack'
+        '4': 'Stack',
+        '5': 'Fibonacci',
+        '6': 'Merge sort'
     }
 
     return options
@@ -30,6 +34,10 @@ def execute_option(option):
         ExecuteBubbleSort.Process()
     elif option == 4:
         ExecuteStack.Process()
+    elif option == 5:
+        fibonacci.Process()
+    elif option == 6:
+        merge_sort.Process()
     else:
         result = False
     return result
